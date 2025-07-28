@@ -1,16 +1,26 @@
 import {
   register,
   InjectCSS,
-  ReplaceElements
-} from '@fortawesome/fontawesome-svg-core/plugins'
+  ReplaceElements,
+  // PseudoElements,
+} from "@fortawesome/fontawesome-svg-core/plugins";
 
-const api = register([InjectCSS, ReplaceElements])
+//const api = register([InjectCSS, ReplaceElements, PseudoElements]);
 
-import { faMugSaucer, faBeerMugEmpty } from '@fortawesome/free-solid-svg-icons'
+// Because the PseudoElements plugin is not included here,
+// the plugin that includes the code for supporting CSS pseudo-elements
+// will not be included in the bundle.
+const api = register([InjectCSS, ReplaceElements]);
 
-api.library.add(faMugSaucer, faBeerMugEmpty)
+import {
+  faMugSaucer,
+  faBeerMugEmpty,
+  faStar,
+} from "@fortawesome/free-solid-svg-icons";
 
-window.addEventListener('DOMContentLoaded', () => {
-  api.dom.i2svg()
-  api.dom.watch()
-})
+api.library.add(faMugSaucer, faBeerMugEmpty, faStar);
+
+window.addEventListener("DOMContentLoaded", () => {
+  api.dom.i2svg();
+  api.dom.watch();
+});
