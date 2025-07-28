@@ -24,7 +24,7 @@ You should review the [list of plugins in the docs](https://docs.fontawesome.com
 
 ## Omitting the PseudoElements Plugin
 
-That is only a viable workaround if you're not using pseudo-elements for Font Awesome SVG/JS in your project. By default, they are not enabled in the `FontAwesomeConfig`.
+Omitting the `PseudoElements` plugin is only a viable workaround if you're not using pseudo-elements for Font Awesome SVG/JS in your project. By default, they are not enabled in the `FontAwesomeConfig`.
 So unless you know that you do need them, then probaly you aren't using them anyway.
 
 To check whether they are enabled in your project, from the JavaScript console, run:
