@@ -18,7 +18,11 @@ When viewed in Safari 15, it will not produce the error shown in GitHub issue [F
 
 # Choosing Plugins
 
-The key here is to omit the `PseudoElements` plugin from the SVG Core plugins used in the build.
+The key here is to omit the `PseudoElements` plugin from the SVG Core plugins used in the build. But that doesn't tell which plugins you should include.
+
+You should review the [list of plugins in the docs](https://docs.fontawesome.com/apis/javascript/plugins#font-awesome-can-do-a-lot) to see which features you rely upon in order to choose the correct set of plugins for your project.
+
+## Omitting the PseudoElements Plugin
 
 That is only a viable workaround if you're not using pseudo-elements for Font Awesome SVG/JS in your project. By default, they are not enabled in the `FontAwesomeConfig`.
 So unless you know that you do need them, then probaly you aren't using them anyway.
